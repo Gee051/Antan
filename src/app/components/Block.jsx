@@ -86,7 +86,7 @@ export default function Block() {
           ref={oml123Ref}
           initial={{ opacity: 0, y: 50 }}
           animate={oml123Controls}
-          className='relative h-64 flex justify-center items-center text-center p-3 m-3 rounded-2xl bg-green-100 '
+          className='relative md:h-64 h-96 flex justify-center items-center text-center p-3 m-3 rounded-2xl bg-green-100 '
         >
           <div
             className="absolute inset-0 bg-cover bg-center rounded-2xl"
@@ -103,7 +103,7 @@ export default function Block() {
           ref={oml126Ref}
           initial={{ opacity: 0, y: 50 }}
           animate={oml126Controls}
-          className='relative h-64 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100 '
+          className='relative md:h-64 h-96 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100 '
         >
           <div
             className="absolute inset-0 bg-cover bg-center rounded-2xl"
@@ -120,7 +120,7 @@ export default function Block() {
           ref={oml137Ref}
           initial={{ opacity: 0, y: 50 }}
           animate={oml137Controls}
-          className='relative h-64 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100'
+          className='relative md:h-64 h-96 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100'
         >
           <div
             className="absolute inset-0 bg-cover bg-center rounded-2xl"
@@ -137,7 +137,7 @@ export default function Block() {
           ref={oml124Ref}
           initial={{ opacity: 0, y: 50 }}
           animate={oml124Controls}
-          className='relative h-64 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100'
+          className='relative md:h-64 h-96 flex items-center justify-center text-center p-3 m-3 rounded-2xl bg-green-100'
         >
           <div
             className="absolute inset-0 bg-cover bg-center rounded-2xl"
