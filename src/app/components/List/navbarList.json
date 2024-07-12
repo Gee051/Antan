@@ -20,12 +20,12 @@
       "link": "/dept"
     },
     {
-      "_id": 1004,
+      "_id": 1005,
       "title": "News",
       "link": "/news"
     },
     {
-      "_id": 1004,
+      "_id": 1006,
       "title": "Contact Us",
       "link": "/contact"
     }

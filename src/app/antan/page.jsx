@@ -17,11 +17,24 @@ const slideInVariant = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
+const slideUpVariant = {
+  hidden: { opacity: 0, y: -50 },
+  visible: { opacity: 1, y: 0 },
+};
 
 const Antan = () => {
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4">
-      <h1 className="text-6xl font-bold my-8 text-center border-b-green-500 border-b-[4px]">Management Staff</h1>
+       <motion.h1
+        className="text-3xl md:text-6xl font-bold my-8 text-center border-b-green-500 border-b-[4px]"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={slideUpVariant}
+        transition={{ duration: 0.5 }}
+      >
+        Management Staff
+      </motion.h1>
 
       <motion.div
         className="flex flex-col items-center mb-16"
@@ -31,21 +44,21 @@ const Antan = () => {
         variants={slideInVariant}
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center">
+        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8 flex flex-col items-center">
           <Image
             src={staffData[0].image}
             alt={staffData[0].name}
-            width={200}
-            height={300}
+            width={300}
+            height={400}
             className="rounded-lg"
           />
-          <h2 className="text-2xl font-semibold mt-4">{staffData[0].name}</h2>
-          <p className="text-sm font-medium">{staffData[0].position}</p>
+          <h2 className="text-xl md:text-3xl font-semibold mt-4">{staffData[0].name}</h2>
+          <p className="text-lg font-medium">{staffData[0].position}</p>
         </div>
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -61,14 +74,14 @@ const Antan = () => {
               height={200}
               className="rounded-lg"
             />
-            <h2 className="text-xl font-semibold mt-4">{staff.name}</h2>
+            <h2 className="text-lg md:text-xl font-semibold mt-4">{staff.name}</h2>
             <p className="text-sm font-medium">{staff.position}</p>
           </div>
         ))}
       </motion.div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -84,7 +97,7 @@ const Antan = () => {
               height={200}
               className="rounded-lg"
             />
-            <h2 className="text-xl font-semibold mt-4">{staff.name}</h2>
+            <h2 className="text-lg md:text-xl font-semibold mt-4">{staff.name}</h2>
             <p className="text-sm font-medium">{staff.position}</p>
           </div>
         ))}

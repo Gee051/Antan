@@ -9,6 +9,7 @@ const NewsPage = () => {
   const [filteredNews, setFilteredNews] = useState(newsData);
 
   useEffect(() => {
+    console.log('Search Term:', searchTerm);  // Debug: Log the current search term
     if (searchTerm.trim() === '') {
       setFilteredNews(newsData);
     } else {
@@ -19,6 +20,7 @@ const NewsPage = () => {
         )
       );
       setFilteredNews(results);
+      console.log('Filtered Results:', results);  // Debug: Log the filtered results
     }
   }, [searchTerm]);
 
